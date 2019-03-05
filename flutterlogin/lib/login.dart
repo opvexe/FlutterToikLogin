@@ -9,6 +9,7 @@ class _loginControllerState extends State<loginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple.shade400,
       body: loginWidget(),
     );
   }
@@ -18,11 +19,10 @@ class loginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.purple.shade400,
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 60.0),
+            padding: EdgeInsets.only(top: 30.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -49,8 +49,15 @@ class loginWidget extends StatelessWidget {
                         textAlign: TextAlign.right,
                         style: TextStyle(fontSize: 18.0, color: Colors.white),
                       ),
-                      onPressed: (){
+                      onPressed: () {
                         print("login code ");
+                        // Navigator.of(context).pushNamed('/router/password'); //路由跳转
+                        Navigator.of(context)
+                            .pushNamed('/router/password')
+                            .then((value) {
+                          //路由跳转带返回数据
+                          print("返回参数${value}");
+                        });
                       },
                     ),
                   ),
@@ -72,11 +79,10 @@ class loginWidget extends StatelessWidget {
             margin: const EdgeInsets.only(left: 40.0, right: 40.0, top: 30.0),
             padding: EdgeInsets.only(left: 5.0, right: 5.0),
             alignment: Alignment.center,
-
-          decoration: BoxDecoration(
-            color: Colors.white30, //颜色加在装饰内部
-            borderRadius: BorderRadius.circular(5.0),
-          ),
+            decoration: BoxDecoration(
+              color: Colors.white30, //颜色加在装饰内部
+              borderRadius: BorderRadius.circular(5.0),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -84,16 +90,20 @@ class loginWidget extends StatelessWidget {
                 Expanded(
                   child: Container(
                     child: TextField(
-                    textAlign: TextAlign.left,
-                    cursorColor: Colors.yellow,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "请输入手机号码",
-                      hintStyle: TextStyle(
-                          color: Colors.grey.shade200, fontSize: 16.0),
+                      textAlign: TextAlign.left,
+                      cursorColor: Colors.yellow,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "请输入手机号码",
+                        hintStyle: TextStyle(
+                            color: Colors.grey.shade200, fontSize: 16.0),
+                      ),
+                      style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.0,
                     ),
-                  ),
+                    ),
                   ),
                 )
               ],
@@ -116,7 +126,7 @@ class loginWidget extends StatelessWidget {
                   width: 200.0,
                   padding: EdgeInsets.only(left: 10.0),
                   child: TextField(
-                    autofocus: true,
+                    obscureText: true,
                     textAlign: TextAlign.left,
                     cursorColor: Colors.yellow,
                     keyboardType: TextInputType.number,
@@ -125,6 +135,10 @@ class loginWidget extends StatelessWidget {
                       hintText: "请输入验证码",
                       hintStyle: TextStyle(
                           color: Colors.grey.shade200, fontSize: 16.0),
+                    ),
+                    style: TextStyle(  //设置输入文本颜色
+                      color: Colors.white,
+                      fontSize: 16.0,
                     ),
                   ),
                 ),
@@ -201,35 +215,33 @@ class loginWidget extends StatelessWidget {
   }
 }
 
-
-
 // 获取区号
 class iphoneButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-       child: Row(
-          children: <Widget>[
-              Padding(
-                padding: EdgeInsets.zero,
-                child: Text(
-                  "+86",
-                 style: TextStyle(fontSize: 18.0, color: Colors.white),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 3.0,right: 0.0),
-                child: Icon(
-                  Icons.arrow_drop_down,
-                  size: 20.0,
-                  color: Colors.white,
-                ),
-              ),
-          ],
-       ),
-       onPressed: (){
-         print("+ 86");
-       },
+      child: Row(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.zero,
+            child: Text(
+              "+86",
+              style: TextStyle(fontSize: 18.0, color: Colors.white),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 3.0, right: 0.0),
+            child: Icon(
+              Icons.arrow_drop_down,
+              size: 20.0,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+      onPressed: () {
+        print("+ 86");
+      },
     );
   }
 }

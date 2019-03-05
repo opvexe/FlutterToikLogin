@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './login.dart';
+import './password.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: loginController(),
+      routes: <String,WidgetBuilder>{
+         '/router/password': (_) => new passwordController(),
+      },
     );
   }
 }
