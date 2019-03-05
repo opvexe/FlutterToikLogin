@@ -69,16 +69,14 @@ class loginWidget extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 50.0,
-            color: Colors.white30,
             margin: const EdgeInsets.only(left: 40.0, right: 40.0, top: 30.0),
             padding: EdgeInsets.only(left: 5.0, right: 5.0),
             alignment: Alignment.center,
 
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.red,
-            ),
-
+          decoration: BoxDecoration(
+            color: Colors.white30, //颜色加在装饰内部
+            borderRadius: BorderRadius.circular(5.0),
+          ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -104,10 +102,13 @@ class loginWidget extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 50.0,
-            color: Colors.white30,
-            margin: const EdgeInsets.only(left: 40.0, right: 40.0, top: 10.0),
+            margin: const EdgeInsets.only(left: 40.0, right: 40.0, top: 15.0),
             padding: EdgeInsets.only(left: 5.0, right: 5.0),
             alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white30,
+              borderRadius: BorderRadius.circular(5.0),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
