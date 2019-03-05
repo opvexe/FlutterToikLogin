@@ -134,7 +134,7 @@ class loginWidget extends StatelessWidget {
                     child: Text(
                       "获取验证码",
                       style: TextStyle(
-                          fontSize: 16.0, color: Colors.grey.shade200),
+                          fontSize: 18.0, color: Colors.grey.shade200),
                     ),
                   ),
                 ),
@@ -178,9 +178,9 @@ class loginWidget extends StatelessWidget {
                   child: IconButton(
                     padding: EdgeInsets.zero,
                     iconSize: 30.0,
-                    icon: Image.asset("assets/images/share_wechat.png"),
+                    icon: Image.asset("assets/images/quan_icon.png"),
                     onPressed: () {
-                      print("Wechat");
+                      print("friend wechat");
                     },
                   ),
                 ),
