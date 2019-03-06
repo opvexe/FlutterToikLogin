@@ -19,7 +19,7 @@ class _passwordControllerState extends State<passwordController> {
 class passwordWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container(   ///键盘遮挡， center   == SingleChildScrollView
       child: SingleChildScrollView(
         child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

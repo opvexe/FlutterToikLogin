@@ -99,7 +99,7 @@ class loginWidget extends StatelessWidget {
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: "请输入手机号码",
-                        labelText: "手机号码",
+                        // labelText: "手机号码",
                         hintStyle: TextStyle(
                             color: Colors.grey.shade200, fontSize: 16.0),
                       ),
@@ -138,7 +138,7 @@ class loginWidget extends StatelessWidget {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "请输入验证码",
-                      labelText: "验证码",
+                      // labelText: "验证码",
                       hintStyle: TextStyle(
                           color: Colors.grey.shade200, fontSize: 16.0),
                     ),
