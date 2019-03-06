@@ -21,7 +21,7 @@ class passwordWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: SingleChildScrollView(
-            child: Column(
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
@@ -63,6 +63,7 @@ class passwordWidget extends StatelessWidget {
                 Expanded(
                   child: Container(
                     child: TextField(
+                      maxLines: 1,
                       textAlign: TextAlign.left,
                       cursorColor: Colors.yellow,
                       keyboardType: TextInputType.number,
