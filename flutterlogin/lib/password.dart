@@ -20,7 +20,8 @@ class passwordWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
+      child: SingleChildScrollView(
+            child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
@@ -55,7 +56,8 @@ class passwordWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(5.0),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 iphoneButton(),
                 Expanded(
@@ -137,6 +139,7 @@ class passwordWidget extends StatelessWidget {
             },
           ),
         ],
+      ),
       ),
     );
   }

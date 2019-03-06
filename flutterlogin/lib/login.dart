@@ -19,7 +19,9 @@ class loginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
+      child: SingleChildScrollView(
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(top: 30.0),
@@ -84,7 +86,8 @@ class loginWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(5.0),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 iphoneButton(),
                 Expanded(
@@ -96,6 +99,7 @@ class loginWidget extends StatelessWidget {
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: "请输入手机号码",
+                        // labelText: "手机号码",
                         hintStyle: TextStyle(
                             color: Colors.grey.shade200, fontSize: 16.0),
                       ),
@@ -120,7 +124,8 @@ class loginWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(5.0),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Container(
                   width: 200.0,
@@ -133,6 +138,7 @@ class loginWidget extends StatelessWidget {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "请输入验证码",
+                      // labelText: "验证码",
                       hintStyle: TextStyle(
                           color: Colors.grey.shade200, fontSize: 16.0),
                     ),
@@ -210,6 +216,7 @@ class loginWidget extends StatelessWidget {
             ),
           ),
         ],
+      ),
       ),
     );
   }
